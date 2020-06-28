@@ -1,13 +1,13 @@
 module.exports = {
     supportedLanguages: {
         'python': 'python',
-        'nodejs': 'nodejs',
+        'javascript': 'javascript',
         'java': 'java',
         'golang': 'golang'
     },
     langProps: {
         'python': { path: 'src/python', extention: 'py' },
-        'nodejs': { path: 'src/nodejs', extention: 'nodejs' },
+        'javascript': { path: 'src/node', extention: 'js' },
         'java': { path: 'src/java', extention: 'java' }
     },
     getDefaultPathByLang: (context, lang) => {

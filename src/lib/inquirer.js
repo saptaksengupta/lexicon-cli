@@ -1,12 +1,15 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
 const fileHandler = require('./fileHandler');
 const utils = require('./utils');
+
+const CHOICES = fs.readdirSync(fileHandler.getTemplateFolerPath());
 const questions = [
     {
         type: 'list',
         name: 'language',
         message: 'What lanuage do you prefer?',
-        choices: ['Python', 'Javascript'],
+        choices: CHOICES,
         filter: function (val) {
             return val.toLowerCase();
         }
@@ -18,15 +21,13 @@ const questions = [
     }
 ]
 
-
 module.exports = {
     askQuestion: () => {
         inquirer.prompt(questions)
             .then((answers) => {
                 if (answers.fileName) {
-                    fileHandler.createFile(fileHandler, answers.fileName, utils.supportedLanguages.python)
+                    fileHandler.createFile(fileHandler, answers.fileName, utils.supportedLanguages[answers.language])
                 } 
-
             })
             .catch(err => console.log(err));
     }

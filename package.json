@@ -1,6 +1,6 @@
 {
   "name": "dsa-lexicon",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A cli to help generate files based on your language preferences",
   "main": "src/index.js",
   "bin": {
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "lexicon",
+    "dsa-lexicon",
     "lexicon-dsa",
     "dsa",
     "lexicon-cli-dsa"
