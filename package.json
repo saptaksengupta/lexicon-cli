@@ -1,11 +1,26 @@
 {
-  "name": "lexicon",
+  "name": "dsa-lexicon",
   "version": "1.0.0",
-  "description": "A cli to help generate files based on your choice",
+  "description": "A cli to help generate files based on your language preferences",
   "main": "src/index.js",
+  "bin": {
+    "generate": "src/index.js"
+  },
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "lexicon",
+    "lexicon-dsa",
+    "dsa",
+    "lexicon-cli-dsa"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saptaksengupta/lexicon-cli"
+  },
+  "homepage": "https://github.com/saptaksengupta/lexicon-cli/blob/master/README.md",
   "author": "Saptak Sengupta",
   "license": "ISC",
   "dependencies": {
