@@ -62,7 +62,7 @@ function main() {
 
 main();
 ```
-** Please Note that if you want any nested directory to be generated you can do it easyly by giving the file name as
+** Please Note that if you want any nested directory to be generated, you can do it easily by giving file name as
 `exampleDir/exampleFilename`. 
 It will generate the file of you choice inside `src/javascript/exampleDir/exampleFilename.js`
 
