@@ -24,16 +24,19 @@ module.exports = {
         // get stats about the current file
         const stats = fs.statSync(readFilePath);
         if (stats.isFile()) {
-            const contents = fs.readFileSync(readFilePath, 'utf8');
-            return contents;
+            return fs.readFileSync(readFilePath, 'utf8');
         }
         return null;
     },
 
     createFile: (context, fileName, language) => {
         const filePath = `${utils.getDefaultPathByLang(utils, language)}/${fileName}.${utils.getExtByLanguage(utils, language)}`;
-        fse.outputFile(filePath, context.getTemplateBasedOnLang(context, language))
+        context.getTemplateBasedOnLang(context, language).then(resp => {
+            fse.outputFile(filePath, resp)
             .then(resp => console.log('Congratulations! Your file has beed saved 👍'))
             .catch(err => console.log(err))
+        }).catch(error => {
+            console.log(error);
+        })
     }
 }
