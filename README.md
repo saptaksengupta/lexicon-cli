@@ -11,6 +11,13 @@
 
 - **Supported Languages:** Current intial version(1.X.X) has JAVA, PYTHON and NODE support only.
 
+# Quick one-off Usage
+
+We can use `lexicon` without actually installing it
+```bash
+npx @saptaksengupta/lexicon
+```
+
 # Installation
 ```bash
 npm i -g @saptaksengupta/lexicon
